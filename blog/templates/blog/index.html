@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+    {{ block.super }}
+{% endblock %}
+
+{% block carousel %}
+    <div id="shadowup"></div>
+    <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    {% load static %}
+                    <img src="{% static 'img/main_slider/1.jpg' %}" style="height: 75vh; overflow: hidden"
+                         class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/main_slider/2.jpg' %}" style="height: 75vh; overflow: hidden"
+                         class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/main_slider/3.jpg' %}" style="height: 75vh; overflow: hidden"
+                         class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/main_slider/4.jpg' %}" style="height: 75vh; overflow: hidden"
+                         class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div id="products">
+        <h1 class="up">Наши продукты </h1>
+        <div class="container d-flex justify-content-around flex-wrap " id="prod_list">
+            {% for product in products %}
+                {% include 'blog/includes/post_card_template.html' %}
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block trust %}
+
+    <div id="trust">
+    <div class="container">
+        <div class="trust-text display-4 up">Нам можно доверять</div>
+        <div class="d-flex justify-content-around flex-wrap">
+            <div class="trust-item text-center ">
+                <h3>
+                    <svg class="icon icon-layers">
+                        <use xlink:href="#icon-layers"></use>
+                    </svg>
+                </h3>
+                <p>Собственные прокатные линии</p>
+            </div>
+            <div class="trust-item text-center">
+                <h3>
+                    <svg class="icon icon-clipboard-list">
+                        <use xlink:href="#icon-clipboard-list"></use>
+                    </svg>
+                </h3>
+                <p>Гибкая ценовая политика. Гарантия. </p>
+            </div>
+            <div class="trust-item text-center">
+                <h3>
+                    <svg class="icon icon-location">
+                        <use xlink:href="#icon-location"></use>
+                    </svg>
+                </h3>
+                <p>Доставка по всей России</p>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+
+{% block location %}
+
+    <div id="location">
+
+        <h1 class="up">Мы находимся</h1>
+        <div class="d-flex align-items-center justify-content-around ">
+            <div class="location-item">
+                <div class="text-center">
+                    <div class="font_18px">Ростов-на-дону, Россия</div>
+                    <div class="font_14px ">Чалтырь, Ул. Ростовская <br>дом 53</div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2706.9222957755!2d39.51343397251013!3d47.27677348030505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3c6a8feac2691%3A0x1ff5c9a40af6172e!2z0KDQvtGB0YLQvtCy0YHQutCw0Y8g0YPQuy4sIDUzLCDQp9Cw0LvRgtGL0YDRjCwg0KDQvtGB0YLQvtCy0YHQutCw0Y8g0L7QsdC7LiwgMzQ2ODAw!5e0!3m2!1sru!2sru!4v1562646606897!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block form %}
+
+    <div class="" id="anket">
+        <div class="container">
+            <div class="trust-text up">Есть вопросы ?
+            </div>
+            <form action="{% url 'send_message_url' %}" method="post" class="mb-4">
+                {% csrf_token %}
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                    <div class="d-flex justify-content-center w-50 flex-column mt-2 inputs">
+                        <label>Ваше имя : </label>
+                        {{ form.name }}
+                    </div>
+                    <div class="d-flex justify-content-center w-50 flex-column mt-2 inputs">
+                        <label>Email : </label>
+                        {{ form.email }}
+                    </div>
+                    <div class="d-flex justify-content-center w-50 flex-column mt-2 inputs" id="input_massage">
+                        <label>Сообщение : </label>
+                        {{ form.message }}
+                    </div>
+                    <input type="submit" class="btn btn-primary w-50 mt-3">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

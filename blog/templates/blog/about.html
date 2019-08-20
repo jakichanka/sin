@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    О компании - {{ block.super }}
+{% endblock %}
+
+
+
+
+
+{% block about %}
+    <hr>
+    <h2 class="up text-center">{{ about.title }}</h2>
+    <div class="card">
+        <div class="card-body product-detail">
+            {{ about.body1 | safe }}
+            {{ about.body2 | safe }}
+        </div>
+    </div>
+{% endblock %}

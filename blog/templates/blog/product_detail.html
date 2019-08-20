@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ product.title }} - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="card mt-2">
+    <div class="card-header text-center font_18px">
+        {{ product.title }}
+    </div>
+
+
+    <div class="card-body">
+        <div class="blockquote mb-0 product-detail">
+            {{ product.body1 | safe }}
+            {{ product.body2 | safe }}
+            <footer class="blockquote-footer">{{ product.date_pub }}</footer>
+        </div>
+    </div>
+
+    </div>
+{% endblock %}
+

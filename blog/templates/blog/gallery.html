@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Галерея - {{ block.super }}
+{% endblock %}
+
+{% block galery %}
+    <hr>
+    <h2 class="up text-center">Галерея</h2>
+    <div id="gallery" class="d-flex flex-wrap justify-content-center align-items-center">
+    {% for image in images %}
+        <a href="{{ image }}" class="lightzoom">
+            <img class="det-img" src="{{ image }}" alt="Card image cap"/>
+        </a>
+    {% endfor %}
+    </div>
+{% endblock %}

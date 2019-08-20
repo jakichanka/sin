@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="синергия,стройматериалы,Sinergiya,синэргия,ростов" />
+    {% load static %}
+        <meta name="google-site-verification" content="6Cwehe6X6V7e9sn14WTK7BPtmgpKT6893k0paF8CYDw" />
+    <link rel="stylesheet" href="{% static 'svg/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>
+        {% block title %}
+            Sinergiya
+        {% endblock %}
+    </title>
+</head>
+<body>
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="icon-layers" viewBox="0 0 24 24">
+            <title>layers</title>
+            <path d="M12 3.118l7.764 3.882-7.764 3.882-7.764-3.882zM11.553 1.106l-10 5c-0.494 0.247-0.694 0.847-0.447 1.341 0.101 0.203 0.261 0.356 0.447 0.447l10 5c0.292 0.146 0.62 0.136 0.894 0l10-5c0.494-0.247 0.694-0.848 0.447-1.342-0.101-0.202-0.262-0.355-0.447-0.447l-10-5c-0.292-0.146-0.62-0.136-0.894 0zM1.553 17.894l10 5c0.292 0.146 0.62 0.136 0.894 0l10-5c0.494-0.247 0.694-0.848 0.447-1.342s-0.848-0.694-1.342-0.447l-9.552 4.777-9.553-4.776c-0.494-0.247-1.095-0.047-1.342 0.447s-0.047 1.095 0.447 1.342zM1.553 12.894l10 5c0.292 0.146 0.62 0.136 0.894 0l10-5c0.494-0.247 0.694-0.848 0.447-1.342s-0.848-0.694-1.342-0.447l-9.552 4.777-9.553-4.776c-0.494-0.247-1.095-0.047-1.342 0.447s-0.047 1.095 0.447 1.342z"></path>
+        </symbol>
+        <symbol id="icon-clipboard-list" viewBox="0 0 32 32">
+            <title>clipboard-list</title>
+            <path d="M13 5v-1.002c0-1.1 0.898-1.998 2.005-1.998h0.99c1.111 0 2.005 0.895 2.005 1.998v1.002h2.004c0.551 0 0.996 0.447 0.996 0.999v1.002c0 0.556-0.446 0.999-0.996 0.999h-9.009c-0.551 0-0.996-0.447-0.996-0.999v-1.002c0-0.556 0.446-0.999 0.996-0.999h2.004zM12 4h-0.997c-1.104 0-2 0.891-2.003 2h-1.003c-1.103 0-1.997 0.89-1.997 2.004v20.993c0 1.107 0.891 2.004 1.997 2.004h15.005c1.103 0 1.997-0.89 1.997-2.004v-20.993c0-1.107-0.891-2.004-1.997-2.004h-1.003c-0.003-1.105-0.895-2-2.003-2h-0.997c-0.001-1.657-1.35-3-3.009-3h-0.982c-1.661 0-3.008 1.338-3.009 3v0 0zM22 7h1c0.545 0 1 0.449 1 1.003v20.994c0 0.564-0.448 1.003-1 1.003h-15c-0.545 0-1-0.449-1-1.003v-20.994c0-0.564 0.448-1.003 1-1.003h1c0.003 1.105 0.895 2 2.003 2h8.994c1.104 0 2-0.891 2.003-2v0 0zM15.5 5c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5v0zM14 14v1h8v-1h-8zM9 13h3v3h-3v-3zM10 14v1h1v-1h-1zM9 18h3v3h-3v-3zM10 19v1h1v-1h-1zM14 19v1h8v-1h-8zM9 23h3v3h-3v-3zM10 24v1h1v-1h-1zM14 24v1h8v-1h-8z"></path>
+        </symbol>
+        <symbol id="icon-location" viewBox="0 0 32 32">
+            <title>location</title>
+            <path d="M16.002 17.746c3.309 0 6-2.692 6-6s-2.691-6-6-6c-3.309 0-6 2.691-6 6s2.691 6 6 6zM16.002 6.746c2.758 0 5 2.242 5 5s-2.242 5-5 5c-2.758 0-5-2.242-5-5s2.242-5 5-5zM16 0c-6.618 0-12 5.316-12 12.001 0 7 6.001 14.161 10.376 19.194 0.016 0.020 0.718 0.805 1.586 0.805 0.002 0 0.073 0 0.077 0 0.867 0 1.57-0.785 1.586-0.805 4.377-5.033 10.377-12.193 10.377-19.194 0-6.685-5.383-12.001-12.002-12.001zM16.117 29.883c-0.021 0.020-0.082 0.064-0.135 0.098-0.010-0.027-0.084-0.086-0.129-0.133-3.665-4.217-9.853-11.334-9.853-17.847 0-5.514 4.487-10.001 10-10.001 5.516 0 10.002 4.487 10.002 10.002 0 6.512-6.188 13.629-9.885 17.881z"></path>
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 32 32">
+            <title>phone</title>
+            <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"></path>
+        </symbol>
+        <symbol id="icon-envelop" viewBox="0 0 32 32">
+            <title>envelop</title>
+            <path d="M29 4h-26c-1.65 0-3 1.35-3 3v20c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-20c0-1.65-1.35-3-3-3zM12.461 17.199l-8.461 6.59v-15.676l8.461 9.086zM5.512 8h20.976l-10.488 7.875-10.488-7.875zM12.79 17.553l3.21 3.447 3.21-3.447 6.58 8.447h-19.579l6.58-8.447zM19.539 17.199l8.461-9.086v15.676l-8.461-6.59z"></path>
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 32 32">
+            <title>instagram</title>
+            <path d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"></path>
+            <path d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"></path>
+            <path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
+        </symbol>
+    </defs>
+</svg>
+<div class="header wrapper d-flex justify-content-between align-items-center">
+    <div class="logo">
+        <a class="logo-href" href="{% url 'products_list_url' %}">
+            <div class="logo-text">
+                <img src="{% static 'img/logo.png' %}" alt="">
+            </div>
+        </a>
+    </div>
+    <div>
+        <ul id="nav" class="up d-flex">
+            <li class="nav-item up"><a href="{% url 'products_list_url' %}">Главная</a></li>
+            <li class="nav-item up"><a href="{% url 'gallery_url' %}">Галерея</a></li>
+            <li class="nav-item up "><a href="{% url 'products_list_url' %}#help">Контакты</a></li>
+            <li class="nav-item up"><a href="{% url 'about_url' %}">О компании</a></li>
+        </ul>
+    </div>
+    <div class="social">
+        <div class="tel">
+            <img src="{% static 'img/social/phone.png' %}" alt="">
+            <a href="tel:+79188904486">+79188904486 <br> Волосюк Павел Федорович (директор)</a>
+        </div>
+        <div id="icons" class="d-flex align-items-center">
+            <a href="https://www.instagram.com/sinergyacompany/?hl=ru">
+                <img src="{% static 'img/social/instagram.png' %}" alt="">
+            </a>
+            <a href="https://www.facebook.com/sinergyacompany">
+                <img src="{% static 'img/social/facebook.png' %}" alt="">
+            </a>
+            <a href="mailto:sinergiya19@mail.com">
+                <img src="{% static 'img/social/mail.png' %}" alt="">
+            </a>
+            <a href="mailto:sinergyacompany@gmail.com">
+                sinergyacompany@gmail.com
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- carousel -->
+{% block carousel %}
+{% endblock %}
+
+<!-- message -->
+
+{% block message %}
+{% endblock %}
+
+
+{% block content %}
+{% endblock %}
+
+{% block trust %}
+{% endblock %}
+
+{% block location %}
+{% endblock %}
+
+{% block about %}
+{% endblock %}
+
+{% block galery %}
+{% endblock %}
+
+<a id="help"></a>
+{% block form %}
+{% endblock %}
+
+<div class="footer text-center">
+    <a href="mailto:sinergiya19@mail.com">
+        sinergyacompany@gmail.com
+    </a>
+</div>
+<script src="https://cdn.ckeditor.com/4.5.11/full/ckeditor.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="{% static 'js/lightzoom.js' %}"></script>
+<script type="text/javascript">
+    jQuery('.lightzoom').lightzoom();
+</script>
+</body>
+</html>

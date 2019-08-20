@@ -1,0 +1,14 @@
+<a class="prod-card" href="{{ product.get_absolute_url }}">
+    <div class="" id="one-product" style="width: 350px">
+        {{ product.images.pic }}
+        {% with product.image_set.all|first as image %}
+            <img class="" id="pic_prod" src="{{ image.pic.url }}" alt="Card image cap" style="height: 250px;width: 350px"/>
+        {% endwith %}
+    <div class="black-back">
+    </div>
+        <div class="absolute font_18px_white up">
+            {{ product.title }}
+        </div>
+    </div>
+
+</a>
